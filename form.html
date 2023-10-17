@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/forms.css">
+  <script type="text/javascript" src="js/form-validation.js"></script>
+  <!--<script>
+    function validateSize(input) {
+      const fileSize = input.files[0].size / 1024 / 1024; // in MiB
+      if (fileSize > 2) {
+        alert('File size exceeds 2 MiB');
+        input = input.val('').clone(true);
+      } else {
+      }
+    }
+  </script>-->
+</head>
+<body>
+  <h1>Website Creation Form</h1>
+  <div>
+    <form action="index.html" method="get" autocomplete="on">
+      <label class="one-start"><b>Enter Website Title:</b></label>
+      <input class="two-start" type="text" name="topbar1" pattern="^[A-Za-z_ ]*$" placeholder="Enter Website Name" maxlength="30" required/>
+
+      <label class="one-start"><b>Enter Website Title Shortform:</b></label>
+      <input class="two-start" type="text" name="title" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Website ShortName" maxlength="5" required/>
+      
+      <label class="one-start"><b>Enter Phone Number:</b></label>
+      <input class="two-start" type="text" name="topbar2" pattern="\d+" placeholder="Enter Phone Number" maxlength="10" required/>
+      
+      <label class="one-start"><b>Upload Logo Image:</b></label><input type="file" accept="image/*" class="img" name="logoimg" required/>
+      
+      <label class="one-start"><b>Upload Full Size Image:</b></label><input class="two-start" type="file" accept="image/*" name="headimg" required/>
+      
+      <label class="one-start"><b>Enter Description of Restaurant:</b></label>
+      <textarea class="two-start" rows="4" cols="50" pattern="^[A-Za-z0-9_ ]*$" name="about" maxlength="200" required></textarea>
+  
+      <label class="one-start"><b>Enter a Caption:</b></label>
+      <input class="two-start" type="text" name="revs1_1" pattern="^[A-Za-z_ ]*$" placeholder="Enter Caption 1 Line 1" maxlength="8" required/>
+      <input class="three-start" type="text" name="revs1_2" pattern="^[A-Za-z_ ]*$" placeholder="Enter Caption 1 Line 2" maxlength="20" required/>
+  
+      <label class="one-start full-width"><b>Food Categories</b></label>
+      <input class="one-start" type="text" name="food1" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Food Category 1" maxlength="20" required/>
+      <input class="two-start" type="text" name="food2" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Food Category 2" maxlength="20" required/>
+      <input class="three-start" type="text" name="food3" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Food Category 3" maxlength="20" required/>
+      <input class="four-start" type="text" name="food4" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Food Category 4" maxlength="20" required/>
+  
+      <label class="one-start full-width"><b>Menu</b></label>
+      <label class="one-start"><b>Speciality Food Image 1: </b></label>
+      <input class="two-start" type="text" name="mtext1" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Speciality Food Name 1" maxlength="25" required/>
+      <input class="three-start" type="text" name="mprice1" pattern="\d+" placeholder="Enter Price" maxlength="4" required/>
+      <input class="four-start" type="file" accept="image/*" name="menu1" required/>
+      <label class="one-start"><b>Speciality Food Image 2: </b></label>
+      <input class="two-start" type="text" name="mtext2" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Speciality Food Name 2" maxlength="25" required/>
+      <input class="three-start" type="text" name="mprice2" pattern="\d+" placeholder="Enter Price" maxlength="4" required/>
+      <input class="four-start" type="file" accept="image/*" name="menu2" required/>
+      <label class="one-start"><b>Speciality Food Image 3: </b></label>
+      <input class="two-start" type="text" name="mtext3" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Speciality Food Name 3" maxlength="25" required/>
+      <input class="three-start" type="text" name="mprice3" pattern="\d+" placeholder="Enter Price" maxlength="4" required/>
+      <input class="four-start" type="file" accept="image/*" name="menu3" required/>
+      <label class="one-start"><b>Speciality Food Image 4: </b></label>
+      <input class="two-start" type="text" name="mtext4" pattern="^[A-Za-z0-9_ ]*$" placeholder="Enter Speciality Food Name 4" maxlength="25" required/>
+      <input class="three-start" type="text" name="mprice4" pattern="\d+" placeholder="Enter Price" maxlength="4" required/>
+      <input class="four-start" type="file" accept="image/*" name="menu4" required/>
+  
+      <label class="one-start full-width"><b>Food Images</b></label>
+      <label class="one-start"><b>Image 1:</b></label><input type="file" accept="image/*" name="image1" required/>
+      <label class="one-start"><b>Image 2:</b></label><input type="file" accept="image/*" name="image2" required/>
+      <label class="one-start"><b>Image 3:</b></label><input type="file" accept="image/*" name="image3" required/>
+      <label class="one-start"><b>Image 4:</b></label><input type="file" accept="image/*" name="image4" required/>
+      <label class="one-start"><b>Image 5:</b></label><input type="file" accept="image/*" name="image5" required/>
+      <label class="one-start"><b>Image 6:</b></label><input type="file" accept="image/*" name="image6" required/>
+      <label class="one-start"><b>Image 7:</b></label><input type="file" accept="image/*" name="image7" required/>
+      <label class="one-start"><b>Image 8:</b></label><input type="file" accept="image/*" name="image8" required/>
+  
+      <label class="one-start full-width"><b>Members Details</b></label>
+      <label class="one-start"><b>Member 1:</b></label>
+      <input class="two-start" type="text" name="mem1" pattern="^[A-Za-z_ ]*$" placeholder="Member 1" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg1" required/>
+      <label class="one-start"><b>Member 2:</b></label>
+      <input class="two-start" type="text" name="mem2" pattern="^[A-Za-z_ ]*$" placeholder="Member 2" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg2" required/>
+      <label class="one-start"><b>Member 3:</b></label>
+      <input class="two-start" type="text" name="mem3" pattern="^[A-Za-z_ ]*$" placeholder="Member 3" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg3" required/>
+      <label class="one-start"><b>Member 4:</b></label>
+      <input class="two-start" type="text" name="mem4" pattern="^[A-Za-z_ ]*$" placeholder="Member 4" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg4" required/>
+      <label class="one-start"><b>Member 5:</b></label>
+      <input class="two-start" type="text" name="mem5" pattern="^[A-Za-z_ ]*$" placeholder="Member 5" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg5" required/>
+      <label class="one-start"><b>Member 6:</b></label>
+      <input class="two-start" type="text" name="mem6" pattern="^[A-Za-z_ ]*$" placeholder="Member 6" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg6" required/>
+      <label class="one-start"><b>Member 7:</b></label>
+      <input class="two-start" type="text" name="mem7" pattern="^[A-Za-z_ ]*$" placeholder="Member 7" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg7" required/>
+      <label class="one-start"><b>Member 8:</b></label>
+      <input class="two-start" type="text" name="mem8" pattern="^[A-Za-z_ ]*$" placeholder="Member 8" maxlength="20" required/>
+      <input class="three-start" type="file" accept="image/*" name="memimg8" required/>
+  
+      <label class="one-start"><b>About Staff:</b></label>
+      <textarea class="two-start" rows="4" cols="50" name="aboutstf" pattern="^[A-Za-z0-9_ ]*$" maxlength="200" required></textarea>
+  
+      <label class="one-start"><b>About Services:</b></label>
+      <textarea class="two-start" rows="4" cols="50" name="aboutser" pattern="^[A-Za-z0-9_ ]*$" maxlength="100" required></textarea>
+  
+      <input id="submit" class="full-width" type="submit" value="Submit"/>
+    </form>
+  </div>
+</body>
+</html>
